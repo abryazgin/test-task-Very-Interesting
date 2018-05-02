@@ -24,3 +24,26 @@ Few additional constraints:
 
 You can use any python version and any functionality offered by STD lib of python. 
 No use of PyPi libs is allowed. 
+
+
+## Solution
+* used Python 3.5 
+* initial mountpoint - `src/pathfinder.py` method `find_path`
+* used Dijkstra algorithm to search accepted routes
+* used minimal-cost-route choosing for algorithm
+* used "last fuel stack" to realize logic with low-cost-fuel 
+    (see `src.route.RouteFuelManager`)
+* examples in `tests/test_*`
+
+PS:
+* used pytest for testing, no for solution
+* TODO test with big data
+* TODO Dijkstra -> A* for constant use solution: 
+** pre-calculatee minimal distance between points
+** use minimal-distance for imperial-function in A*
+* TODO optimize/non-duplicate routes: if route "bad" 
+(has greatest cost, no have more visited across-points and no have better 
+fuel-pool) - close him
+* TODO refactor ordered-lists to sorted-trees
+* TODO refactor answer object (Route)
+* TODO refactor modules - `src/route.py` -> `src/route.py` & `src/fuel.py` (`manager.py` ?)
