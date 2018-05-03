@@ -15,7 +15,7 @@ def find_path(
         roadmap: RoadMap,
         from_point: MapPoint,
         to_point: MapPoint,
-        across_points: Iterable(MapPoint),
+        across_points: Iterable[MapPoint],
         truckstate: TruckState,
 ):
     """

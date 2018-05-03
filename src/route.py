@@ -8,9 +8,9 @@ from roadmap import Road, MapPoint
 
 RoutePoint = namedtuple('RoutePoint', ('map_point', 'number',))
 Route = namedtuple('Route', (
-    'route_points',  # Iterable(RoutePoints)
+    'route_points',  # Iterable[RoutePoints]
     'route_fuel_pool',  # RouteFuelPool
-    'points_to_across',  # Iterable(MapPoint)
+    'points_to_across',  # Iterable[MapPoint]
     'end',  # MapPoint
     'cost',  # Numeric
     'length',  # int
@@ -87,7 +87,7 @@ class RouteManager:
     def __init__(
             self,
             to_point: MapPoint,
-            across_points: Iterable(MapPoint),
+            across_points: Iterable[MapPoint],
             fuel_capacity: Numeric,
             mpg: Numeric,
     ):
